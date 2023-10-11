@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <div class="container">
+  <h1 class="display-4">🍔🍕🌯 Restaurants 🌯🍕🍔</h1>
+  <p class="lead">Pizza , Steaks ,Shawarma FOOOOOD!!</p>
+  <hr class="my-4">
+  <p>My Favorites Restaurants In Israel</p>
+  <a class="btn btn-warning btn-lg" href="{{ url_for('cafes') }}" role="button">Show Me!</a>
+</div>
+    </div>
+
+{% endblock %}

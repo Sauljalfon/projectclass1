@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+<!--Don't forget your import here-->
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Add a new cafe into the database</h1>
+
+      <!-- This is where your WTForm will go -->
+
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+          {{ form.restaurants.label }} <br/> {{ form.restaurants() }}
+        </p>
+        <p>
+          {{ form.rest_location.label }} <br/> {{ form.rest_location() }}
+        </p>
+        <p>
+          {{ form.opening_time.label }} <br/> {{ form.opening_time() }}
+        </p>
+        <p>
+          {{ form.closing_time.label }} <br/> {{ form.closing_time() }}
+        </p>
+        <p>
+          {{ form.food_rating.label }} <br/> {{ form.food_rating() }}
+        </p>
+        <p>
+          {{ form.service.label }} <br/> {{ form.service() }}
+        </p>
+        <p>
+          {{ form.cost.label }} <br/> {{ form.cost() }}
+        </p>
+        <br/>
+        {{ form.submit() }}
+      </form>
+
+	  <p class="space-above"><a href="{{ url_for('cafes') }}">See all cafes</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
